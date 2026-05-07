@@ -75,7 +75,7 @@ git status
 Here we are committing the changes to the repository. We can see that the changes are now committed to the repository. The -m flag is used to add a message to the commit. This message is a short description of the changes that were made. You can use this message to remember what the changes were. Missing the -m flag will result in an action that opens your default settings editor, which is usually VIM.
 
 Logs
-Terminal window
+
 git log
 
 This command will show you the history of your repository. It will show you all the commits that were made to the repository. You can use the --oneline flag to show only the commit message. This will make the output more compact and easier to read.
@@ -101,6 +101,44 @@ node_modules
 .vscode
 
 Now, when you run the git status command, it will not show the node_modules and .vscode folders as being tracked by git.
+
+
+Git Snapshots
+A git snapshot is a point in time in the history of your code. It represents a specific version of your code, including all the files and folders that were present at that time. Each snapshot is identified by a unique hash code, which is a string of characters that represents the contents of the snapshot.
+
+Snapshot is a loose term that is used when git stores information about the code in a locally stored key-value based database. Everything is stored as an object and each object is identified by a unique hash code.
+
+
+3 Musketeers of Git
+The three musketeers of git are:
+
+Commit Object
+Tree Object
+Blob Object
+Commit Object
+Each commit in the project is stored in .git folder in the form of a commit object. A commit object contains the following information:
+
+Tree Object
+Parent Commit Object
+Author
+Committer
+Commit Message
+Tree Object
+Tree Object is a container for all the files and folders in the project. It contains the following information:
+
+File Mode
+File Name
+File Hash
+Parent Tree Object
+Everything is stored as key-value pairs in the tree object. The key is the file name and the value is the file hash.
+
+Blob Object
+Blob Object is present in the tree object and contains the actual file content. This is the place where the file content is stored.
+
+<img width="3083" height="1557" alt="image" src="https://github.com/user-attachments/assets/62a1d5b3-62fb-46db-afc1-cf4b6cfebd23" />
+
+
+
 
 
 
