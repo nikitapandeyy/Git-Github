@@ -277,21 +277,101 @@ This command saves your changes in a temporary location. It is like a stack of c
 Naming the stash
 You can also name the stash by using the following command:
 
-Terminal window
 git stash save "work in progress on X feature"
 
 View the stash list
 You can view the list of stashes by using the following command:
 
-Terminal window
+
 git stash list
 
 Apply the Most Recent Stash
 You can apply the stash by using the following command:
 
-Terminal window
+
 git stash apply
 
+Apply Specific Stash
+You can apply the specific stash by using the following command:
+
+
+git stash apply stash@{0}
+
+Here stash@{0} is the name of the stash. You can use the git stash list command to get the name of the stash.
+Applying and Drop a Stash
+You can apply and drop the stash by using the following command:
+
+
+git stash pop
+
+Drop the stash
+You can drop the stash by using the following command:
+
+
+git stash drop
+
+Applying stash to a specific branch
+You can apply the stash to a specific branch by using the following command:
+
+
+git stash apply stash@{0} <branch-name>
+
+Clearing the stash
+You can clear the stash by using the following command:
+
+
+git stash clear
+
+Git Tags
+Tags are a way to mark a specific point in your repository. They are useful when you want to remember a specific version of your code or when you want to refer to a specific commit. Tags are like sticky notes that you can attach to your commits.
+
+Creating a tag
+You can create a tag using the following command:
+
+Terminal window
+git tag <tag-name>
+
+This command creates a new tag with the specified name. The tag will be attached to the current commit.
+
+Create an annotated tag
+You can create an annotated tag using the following command:
+
+Terminal window
+git tag -a <tag-name> -m "Release 1.0"
+
+This command creates an annotated tag with the specified name and message. The tag will be attached to the current commit.
+
+List all tags
+You can list all tags using the following command:
+
+Terminal window
+git tag
+
+This command lists all the tags in your repository.
+
+Tagging a specific commit
+You can tag a specific commit using the following command:
+
+Terminal window
+git tag <tag-name> <commit-hash>
+
+Push tags to remote repository
+You can push tags to a remote repository using the following command:
+
+Terminal window
+git push origin <tag-name>
+
+Delete a tag
+You can delete a tag using the following command:
+
+Terminal window
+git tag -d <tag-name>
+
+Delete tag on remote repository
+You can delete a tag on a remote repository using the following command:
+
+Terminal window
+git push origin :<tag-name>
 
 
 
