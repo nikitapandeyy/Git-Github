@@ -190,6 +190,69 @@ List all branches means that you are going to see all the branches in your repos
 Conclusion
 In this section, we have learned about the different types of merges and how to resolve conflicts. We have also learned about the importance of branching and merging in Git and Github.
 
+Git diff
+The git diff is an informative command that shows the differences between two commits. It is used to compare the changes made in one commit with the changes made in another commit. Git consider the changed versions of same file as two different files. Then it gives names to these two files and shows the differences between them
+
+How to Read the Diff Output
+a/ – the original file (before changes)
+b/ – the updated file (after changes)
+--- – marks the beginning of the original file
++++ – marks the beginning of the updated file
+@@ – shows the line numbers and position of changes
+Here the file A and file B are the same file but different versions.
+
+Git will show you the changes made in the file A and file B. It will also show you the line number where the change occurred along with little preview of the change.
+
+Comparing Working Directory and Staging Area
+Terminal window
+git diff
+
+This command shows the unstaged changes in your working directory compared to the staging area. This command alone will not show you the changes made in the file A and file B, you need to provide options to show the changes.
+  
+
+Comparing Two Branches
+Terminal window
+git diff <branch-name-one> <branch-name-two>
+
+This command compares the difference between two branches.
+
+Another way to compare the difference between two branches is to use the following command:
+
+Terminal window
+git diff branch-name-one..branch-name-two
+
+Comparing Specific Commits:
+Terminal window
+git diff <commit-hash-one> <commit-hash-two>
+
+This command compares the difference between two commits.
+
+Git Stash
+Stash is a way to save your changes in a temporary location. It’s useful when switching branches without losing work. You can then come back to the file later and apply the changes.
+
+Conflicting changes will not allow you to switch branches without committing the changes. Another alternative is to use the git stash command to save your changes in a temporary location.
+
+git stash
+
+This command saves your changes in a temporary location. It is like a stack of changes that you can access later.
+
+Naming the stash
+You can also name the stash by using the following command:
+
+Terminal window
+git stash save "work in progress on X feature"
+
+View the stash list
+You can view the list of stashes by using the following command:
+
+Terminal window
+git stash list
+
+Apply the Most Recent Stash
+You can apply the stash by using the following command:
+
+Terminal window
+git stash apply
 
 
 
